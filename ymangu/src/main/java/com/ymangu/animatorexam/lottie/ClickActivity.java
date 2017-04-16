@@ -1,11 +1,13 @@
 package com.ymangu.animatorexam.lottie;
 
+import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieComposition;
@@ -62,6 +64,29 @@ public class ClickActivity extends AppCompatActivity {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 tv_seek.setText(" 动画进度" +(int) (animation.getAnimatedFraction()*100) +"%");
+            }
+        });
+
+        animation_view_click.addAnimatorListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                Toast.makeText(ClickActivity.this,"onAnimationEnd，动画总时长为" +
+                        animation_view_click.getDuration() + "ms",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
             }
         });
     }
