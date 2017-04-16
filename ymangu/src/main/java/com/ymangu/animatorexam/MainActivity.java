@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import com.ymangu.animatorexam.lottie.ClickActivity;
 import com.ymangu.animatorexam.lottie.NetworkActivity;
-import com.ymangu.animatorexam.lottie.SimpleActivity;
+import com.ymangu.animatorexam.reverse.ReverseActivity;
 
 import okhttp3.OkHttpClient;
 
@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent=new Intent(MainActivity.this,SimpleActivity.class);
+//                Intent intent=new Intent(MainActivity.this,SimpleActivity.class);
+                Intent intent=new Intent(MainActivity.this,ReverseActivity.class);
                 startActivity(intent);
             }
         });

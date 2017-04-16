@@ -25,6 +25,7 @@
         <activity android:name=".lottie.ClickActivity"/>
         <activity android:name=".lottie.SimpleActivity"/>
         <activity android:name=".lottie.NetworkActivity"/>
+        <activity android:name=".reverse.ReverseActivity"/>
 
     </application>
 
